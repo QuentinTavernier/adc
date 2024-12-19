@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/adc/static/css/main.0fbcb44b.css",
-    "main.js": "/adc/static/js/main.a8f637f5.js",
+    "main.css": "/adc/static/css/main.ab6e4a78.css",
+    "main.js": "/adc/static/js/main.79f1be26.js",
     "static/js/453.cb18d863.chunk.js": "/adc/static/js/453.cb18d863.chunk.js",
     "static/media/logo.webp": "/adc/static/media/logo.548ef71336d2e42829e5.webp",
     "static/media/banner.webp": "/adc/static/media/banner.1e60db659d46164b1a38.webp",
     "static/media/mecenat.webp": "/adc/static/media/mecenat.2fc75e55fb4bad3e4008.webp",
+    "static/media/header-logo.webp": "/adc/static/media/header-logo.d7d6b4cbebfaf9eae062.webp",
     "static/media/ch-lepuy.webp": "/adc/static/media/ch-lepuy.158ab16c968c83388b3a.webp",
     "static/media/placeholder.webp": "/adc/static/media/placeholder.fe556bbb4d7bd5de6cd8.webp",
     "index.html": "/adc/index.html",
-    "main.0fbcb44b.css.map": "/adc/static/css/main.0fbcb44b.css.map",
-    "main.a8f637f5.js.map": "/adc/static/js/main.a8f637f5.js.map",
+    "main.ab6e4a78.css.map": "/adc/static/css/main.ab6e4a78.css.map",
+    "main.79f1be26.js.map": "/adc/static/js/main.79f1be26.js.map",
     "453.cb18d863.chunk.js.map": "/adc/static/js/453.cb18d863.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fbcb44b.css",
-    "static/js/main.a8f637f5.js"
+    "static/css/main.ab6e4a78.css",
+    "static/js/main.79f1be26.js"
   ]
 }
