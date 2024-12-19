@@ -68,7 +68,7 @@ function App() {
             <div className="relative">
                 <img
                     src={require('./assets/images/banner.webp')}
-                    className="w-full h-auto mt-32 mb-4"
+                    className="w-full h-auto mt-20 mb-4"
                     alt="banner"
                 />
             </div>

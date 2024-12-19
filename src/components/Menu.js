@@ -86,12 +86,12 @@ export const Menu = (props) => {
 
     return (
         <Box
-            className="fixed flex justify-center top-0 left-0 h-32 w-full z-50 bg-white dark:bg-black"
+            className="fixed flex justify-center top-0 left-0 h-20 w-full z-50 bg-white dark:bg-black"
             sx={styles.drawerPaper}
         >
             {/* Desktop Menu */}
             <Box className="container hidden lg:flex w-full between-center">
-                <Logo/>
+                <Logo isHeader/>
                 <div className="flex end-center grow gap-4">
                     <Tabs
                         value={value}
@@ -108,7 +108,7 @@ export const Menu = (props) => {
 
             {/* Mobile Menu */}
             <Box className="lg:hidden w-full flex between-center px-4 py-3">
-                <Logo/>
+                <Logo isHeader/>
                 <div className="d-flex-row center-center gap-4 mr-2">
                     <IconButton
                         onClick={() => setIsDrawerOpen(true)}
