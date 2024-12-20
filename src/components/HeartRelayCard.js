@@ -6,29 +6,16 @@ import {useTranslation} from "react-i18next";
 import {IconComponent} from "./IconComponent";
 import {Title} from "./Title";
 import {ImagesGallery} from "./ImagesGallery";
+import {StatItem} from "./StatItem";
 
 import {SpringLayoutTransitionDiv} from "./animations/SpringLayoutTransitionDiv";
 import {ScrollVisibilityDiv} from "./animations/ScrollVisibilityDiv";
-
 
 export const HeartRelayCard = (props) => {
     const {heartRelay, expanded, onExpandClick} = props
     const {year, km, funds, participants, images, description} = heartRelay
 
     const {t} = useTranslation();
-
-    const StatItem = ({icon, value, label}) => (
-        <div className="flex items-center space-x-2">
-            <IconComponent
-                icon={icon}
-                color="green"
-                size="large"
-            />
-            <p className="text-green font-montserrat">
-                <span className="font-bold text-xl">{value}</span> {label}
-            </p>
-        </div>
-    );
 
     return (
         <ScrollVisibilityDiv className="w-full">

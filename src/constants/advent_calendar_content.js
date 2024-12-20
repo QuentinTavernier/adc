@@ -1,5 +1,6 @@
 export const advent_calendar_content = {
     fund: 2065,
+    participants : 156,
     sponsors: [
         {
             image: "ing",

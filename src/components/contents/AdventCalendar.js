@@ -4,14 +4,14 @@ import {useTranslation} from "react-i18next";
 
 import {SpringLayoutTransitionDiv} from "../animations/SpringLayoutTransitionDiv";
 import {Title} from "../Title";
+import {Sponsors} from "./Sponsors";
+import {StatItem} from "../StatItem";
 
 import {advent_calendar_content} from "../../constants/advent_calendar_content";
-import {IconComponent} from "../IconComponent";
-import {Sponsors} from "./Sponsors";
-
 
 export const AdventCalendar = () => {
     const {t} = useTranslation();
+    const {fund, participants, sponsors} = advent_calendar_content
 
     return (
         <SpringLayoutTransitionDiv className="flex d-flex-col gap">
@@ -20,17 +20,11 @@ export const AdventCalendar = () => {
                 <p className="p-text my-2">
                     {t('advent_calendar_text')}
                 </p>
-                <div className="d-flex-row start-center my-4">
-                    <IconComponent
-                        icon="volunteer_activism"
-                        color="green"
-                        size="small"
-                    />
-                    <p className="p-text ml-2">
-                        {advent_calendar_content.fund}€ {t('collected')}
-                    </p>
+                <div className="d-flex-col gap-2 my-4">
+                    <StatItem icon="volunteer_activism" value={fund} label={`€ ${t('collected')}`}/>
+                    <StatItem icon="group" value={participants} label={t('participants')}/>
                 </div>
-                <Sponsors sponsors={advent_calendar_content.sponsors}/>
+                <Sponsors sponsors={sponsors}/>
             </div>
         </SpringLayoutTransitionDiv>
     );
