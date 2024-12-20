@@ -19,16 +19,16 @@ export const WhoAreWe = () => {
             </div>
             <ScrollVisibilityDiv className="flex d-flex-col gap">
                 <img
-                    src={require('../../assets/images/placeholder.webp')}
+                    src={require('../../assets/images/who_are_we.webp')}
                     className="images"
                     alt="ADC"
                 />
-                <p className="p-text">
-                    {t('who_are_we_text')}
-                </p>
-                <Title text={t('sponsors')} level={2} color="green"/>
-                <Sponsors sponsors={who_are_we_sponsors}/>
             </ScrollVisibilityDiv>
+            <p className="p-text">
+                {t('who_are_we_text')}
+            </p>
+            <Title text={t('sponsors')} level={2} color="green"/>
+            <Sponsors sponsors={who_are_we_sponsors}/>
         </div>
     );
 };

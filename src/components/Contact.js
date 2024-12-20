@@ -9,8 +9,8 @@ export const Contact = () => {
     const AGMReport = require('../assets/docs/report.pdf');
 
     return (
-        <div className="d-flex-col-reverse md:d-flex-col gap-4 md:gap-2">
-            <div className="flex flex-col center-center md:end-end gap-2 mt-4 md:mt-0 md:mb-4">
+        <div className="d-flex-col-reverse center-between">
+            <div className="flex flex-col center-center md:end-end gap-2 mt-4">
                 <a
                     href={legalNotices}
                     download

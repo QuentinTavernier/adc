@@ -10,11 +10,11 @@ export const EventCalendar = () => {
 
     return (
         <ScrollVisibilityDiv>
-            <div className="card p-0 border-0 bg-green w-full lg:w-2/3 xl:w-1/2 2xl:w-1/3 overflow-hidden">
+            <div className="card p-0 bg-opaqueGreen w-full md:w-2/3 lg:w-1/3 overflow-hidden">
                 <div className="pt-4 px-4">
-                    <Title text={t('next_event')} level={3} color="white"/>
+                    <Title text={t('next_event')} level={3} color="green"/>
                 </div>
-                <div className="w-full flex flex-col p-6 mt-4 bg-white">
+                <div className="w-full flex flex-col p-6 mt-4 bg-white rounded-b-xl">
                     <div className="w-full flex flex-row gap-6">
                         <div className="w-1/3 bg-opaqueGreen h-fit rounded-xl p-4 flex flex-col items-center justify-center">
                             <p className="p-text text-green font-medium">
@@ -42,6 +42,7 @@ export const EventCalendar = () => {
                             {next_event_content.link && (
                                 <div className="mt-2">
                                     <ButtonComponent
+                                        animateIcon
                                         icon="how_to_reg"
                                         text={t('i_register')}
                                         onClick={() => window.open(next_event_content.link)}

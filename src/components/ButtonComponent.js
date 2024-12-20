@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import {IconComponent} from "./IconComponent";
 
 export const ButtonComponent = (props) => {
-    const {onClick, icon = "code", text, variant = "outlined", isLinkedInIcon, isGitHubIcon} = props;
+    const {onClick, icon = "code", text, variant = "outlined", isLinkedInIcon, isGitHubIcon, animateIcon} = props;
 
     const buttonStyle = {
         '&.MuiButton-root': {
@@ -29,6 +29,7 @@ export const ButtonComponent = (props) => {
         <Button variant={variant} sx={buttonStyle} onClick={onClick}>
             {isLinkedInIcon ? <LinkedInIcon/> : isGitHubIcon ? <GitHubIcon/> :
                 <IconComponent
+                    animate={animateIcon}
                     icon={icon}
                     color={variant === "outlined" ? "green" : "white"}
                     size="small"
@@ -51,5 +52,6 @@ ButtonComponent.propTypes = {
     text: PropTypes.string,
     variant: PropTypes.string,
     isLinkedInIcon: PropTypes.bool,
-    isGitHubIcon: PropTypes.bool
+    isGitHubIcon: PropTypes.bool,
+    animateIcon: PropTypes.bool
 }

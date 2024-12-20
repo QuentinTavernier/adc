@@ -20,8 +20,17 @@ function App() {
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
+
         const sectionRefs = [homeRef, relayRef, adventRef, newsRef, whoAreWeRef];
-        sectionRefs[newValue].current.scrollIntoView({behavior: 'smooth', block: "start"});
+        const offset = -50;
+
+        const element = sectionRefs[newValue].current;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+            top: elementPosition + offset,
+            behavior: 'smooth',
+        });
     };
 
     useEffect(() => {
@@ -52,7 +61,7 @@ function App() {
                 });
             },
             {
-                threshold: 0.5
+                threshold: 0.75
             }
         );
 
@@ -84,7 +93,7 @@ function App() {
                     <div className="absolute inset-0 w-screen left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-green"/>
                     <News/>
                 </div>
-                <div ref={whoAreWeRef} id="section-4" className="content-section mb-24">
+                <div ref={whoAreWeRef} id="section-4" className="content-section">
                     <WhoAreWe/>
                 </div>
             </div>

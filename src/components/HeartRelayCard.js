@@ -93,8 +93,7 @@ export const HeartRelayCard = (props) => {
                 </div>
             </SpringLayoutTransitionDiv>
         </ScrollVisibilityDiv>
-    )
-        ;
+    );
 }
 
 HeartRelayCard.propTypes = {

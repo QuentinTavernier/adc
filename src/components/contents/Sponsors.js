@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
+import {ScrollVisibilityDiv} from "../animations/ScrollVisibilityDiv";
+
 export const Sponsors = (props) => {
     const {sponsors, isFooter} = props
 
     return (
-        <div className="d-flex-row gap">
+        <ScrollVisibilityDiv>
+        <div className="d-flex-row flex-wrap gap">
             {sponsors.map((sponsor, index) => (
                 <button
                     key={index}
                     onClick={() => window.open(sponsor.link, '_blank')}
-                    className="sponsor-button"
+                    className="card w-fit"
                 >
                     <img
                         src={require(`../../assets/images/${sponsor.image}.webp`)}
@@ -20,6 +23,7 @@ export const Sponsors = (props) => {
                 </button>
             ))}
         </div>
+        </ScrollVisibilityDiv>
     );
 };
 

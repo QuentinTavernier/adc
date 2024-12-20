@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 
 import {EnteringDiv} from "./animations/EnteringDiv";
-import {IconComponent} from "./IconComponent";
 import {SpringLayoutTransitionDiv} from "./animations/SpringLayoutTransitionDiv";
+import {IconComponent} from "./IconComponent";
 
 export const Fund = (props) => {
     const {
@@ -19,6 +19,7 @@ export const Fund = (props) => {
         singularText,
         pluralText,
         icon,
+        handleSetProgressIsComplete
     }
         = props
 
@@ -45,6 +46,7 @@ export const Fund = (props) => {
         const interval = setInterval(() => {
             setProgressAmount((prevAmount) => {
                 if (prevAmount + increment >= amount) {
+                    handleSetProgressIsComplete()
                     clearInterval(interval);
                     return amount;
                 }
@@ -61,7 +63,7 @@ export const Fund = (props) => {
         const imgElement = (
             <img
                 src={require(`../assets/images/${image}`)}
-                className="w-auto h-16 object-cover mb-4"
+                className="w-auto h-16 object-cover"
                 alt={`Fund for ${image}`}
             />
         );
@@ -106,11 +108,13 @@ export const Fund = (props) => {
                                                     icon={icon}
                                                     color={color}
                                                     size="small"
+                                                    animate
                                                 />
                                             ))}
                                         </div>
                                         <p className={`p-text font-montserrat text-${color}`}>
-                                            {number} {number === 1 ? singularText : pluralText}
+                                            <span
+                                                className="font-bold">{number}</span> {number === 1 ? singularText : pluralText}
                                         </p>
                                     </div>
                                 </div>
@@ -134,6 +138,7 @@ export const Fund = (props) => {
                                 icon={icon}
                                 color={color}
                                 size="small"
+                                animate
                             />
                         ))}
                     </div>
@@ -148,9 +153,9 @@ export const Fund = (props) => {
     return (
         <div className="w-full">
             {renderImage()}
-            <div className="relative w-full bg-opaqueWhite between-center rounded-full flex items-center h-12 p-4">
+            <div className="relative w-full bg-opaqueWhite between-center rounded-full flex items-center h-10 p-4">
                 <div
-                    className={`absolute left-0 h-12 rounded-full z-0 bg-${color}`}
+                    className={`absolute left-0 h-10 rounded-full z-0 bg-${color}`}
                     style={{
                         width: `${(progressAmount / targetAmount) * 100}%`,
                         transition: 'width 1s ease-out',
@@ -175,5 +180,6 @@ Fund.propTypes = {
     image: PropTypes.string.isRequired,
     singularText: PropTypes.string.isRequired,
     pluralText: PropTypes.string.isRequired,
-    link: PropTypes.string
+    link: PropTypes.string,
+    handleSetProgressIsComplete : PropTypes.func.isRequired,
 };

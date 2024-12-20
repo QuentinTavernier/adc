@@ -1,7 +1,7 @@
 {
   "jackpot": "Notre cagnotte",
   "jackpot_text": "Notre objectif est de collecter entre 4 000€ et 6 000€ par an dans le but de pouvoir rassembler le plus rapidement possible les fonds pour sauver un enfant atteint de malformation cardiaque (un forfait de 12 000€ est nécessaire comprenant le coût de l'opération en chirurgie cardiaque, le transport et l'hébergement en famille d'accueil).",
-  "participate": "Je participe",
+  "participate": "Faire un don",
   "next_event": "Prochain événement",
   "i_register": "Je m'inscris",
   "heart_relay": "Relais du coeur",
@@ -10,7 +10,7 @@
   "advent_calendar_text": "24 cadeaux auprès de nos commerçants locaux cachés derrières des cases virtuelles (du 1er au 24 décembre) et 100% des bénéfices sont reversés au profit de Mécénat Chirurgie Cardiaque.",
   "news": "Actualités",
   "who_are_we": "Qui sommes nous ?",
-  "who_are_we_text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "who_are_we_text" : "Auvergnats du Cœur est une jeune association créée le 10 Février 2019 par 2 coureurs auvergnats souhaitant contribuer à leur manière au monde d’aujourd’hui. L’association poursuit avant toute chose un but non lucratif. Sa seule ambition est de récolter et redistribuer 100% des sommes perçues de ses manifestations au profit d’autres associations à portée humanitaire. Le dépassement de soi, l’endurance, l’enthousiasme, l’engagement, la résilience sont des valeurs ancrées en chacun d’entre nous. Nous avons voulu transcender tout cela au travers de cette association et par le biais du sport. Courir est devenu aujourd’hui un sport conventionnel et accessible à tous au même titre que la marche, la randonnée ou le trail.\nNous avons donc voulu réunir autour de cette association toutes les personnes à la recherche de plaisir et d’émotions. Universel, le sport est un langage commun, synonyme de liberté, respect et de tolérance. Notre engagement a débuté en 2019 et notre dévolu s’est porté sur l’Association Mécénat Chirurgie Cardiaque pour qui nous avons eu un vrai coup de cœur. Cette association permet à des enfants souffrant de malformations cardiaques de venir en France afin d’y être prise en charge lorsque cela n’est pas possible dans leur pays d'origine par manque de moyens financiers et/ou techniques. Mécénat Chirurgie Cardiaque est une association loi 1901 reconnue d'intérêt général, habilitée juridiquement et fiscalement à recevoir des legs, donations et assurance-vie, exonérés de droits de succession et de mutation",
   "learn_more": "En savoir plus",
   "hide": "Cacher",
   "collected": "collectés",
@@ -19,5 +19,7 @@
   "partners" : "Nos partenaires :",
   "sponsors" : "Nos sponsors :",
   "legal_notices" : "Mentions légales",
-  "AGM_report" : "Compte rendu d'AG"
+  "AGM_report" : "Compte rendu d'AG",
+  "thank_you" : "MERCI",
+  "thank_you_text": "C'est grâce à vous. Si vous souhaitez également aider les enfants, vous pouvez faire un don ou participer à notre prochain événement :"
 }

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import PropTypes from "prop-types";
-
 import {useTranslation} from "react-i18next";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -12,29 +11,37 @@ import ListItemButton from '@mui/material/ListItemButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
-
 import {Logo} from "./Logo";
-
 
 export const Menu = (props) => {
     const {value, handleChange} = props;
-
     const {t} = useTranslation();
-
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const styles = {
         tabs: {
+            height: '80px',  // Hauteur fixe correspondant à h-20
+            minHeight: '80px',
+            '& .MuiTabs-scroller': {
+                height: '100%',
+            },
+            '& .MuiTabs-flexContainer': {
+                height: '100%',
+            },
             "& .MuiTab-root": {
                 color: "var(--color-green)",
                 fontFamily: "'MontSerrat', sans-serif",
                 fontSize: '14px',
                 textTransform: 'none',
+                height: '100%',
+                minHeight: '100%',
+                padding: '0 16px',
                 '&.Mui-selected': {
                     color: "var(--color-green)",
                 },
             },
             "& .MuiTabs-indicator": {
+                height: "3px",
                 backgroundColor: "var(--color-green)",
             },
         },
@@ -51,14 +58,14 @@ export const Menu = (props) => {
         },
         closeButton: {
             padding: 0,
-            color: "var(--color-green) !important" ,
+            color: "var(--color-green) !important",
         },
         drawerBox: {
             width: '100%',
             pt: 1,
             px: 4,
             height: "100%",
-            bgcolor:  "white",
+            bgcolor: "white",
         },
         drawerHeader: {
             padding: '10px 0',
@@ -90,9 +97,9 @@ export const Menu = (props) => {
             sx={styles.drawerPaper}
         >
             {/* Desktop Menu */}
-            <Box className="container hidden lg:flex w-full between-center">
+            <Box className="container hidden lg:flex w-full items-center justify-between h-full">
                 <Logo isHeader/>
-                <div className="flex end-center grow gap-4">
+                <Box className="flex items-center h-full">
                     <Tabs
                         value={value}
                         onChange={handleChange}
@@ -103,7 +110,7 @@ export const Menu = (props) => {
                             <Tab key={item.value} label={item.label}/>
                         ))}
                     </Tabs>
-                </div>
+                </Box>
             </Box>
 
             {/* Mobile Menu */}

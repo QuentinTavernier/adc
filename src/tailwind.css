@@ -114,7 +114,7 @@
     }
 
     .marker {
-        @apply border-2 flex center-center rounded-xl p-4 gap-2
+        @apply border-2 flex center-center rounded-xl p-2 gap-3
     }
 
     .tag {
@@ -122,7 +122,7 @@
     }
 
     .card {
-        @apply flex flex-col border border-opaqueGreen rounded-2xl h-auto w-full p-4 bg-opaqueWhite dark:bg-opaqueBlack
+        @apply flex flex-col border border-opaqueGreen rounded-2xl h-auto w-full p-4 bg-opaqueWhite shadow
     }
 
     .progress {
