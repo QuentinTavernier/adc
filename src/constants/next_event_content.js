@@ -1,4 +1,4 @@
-export const nextEvent = {
+export const next_event_content = {
     day : "Dimanche",
     number : 29,
     month : "Juin",

@@ -15,6 +15,7 @@ export const ButtonComponent = (props) => {
         },
         '&.MuiButton-contained': {
             backgroundColor: "var(--color-green)",
+            border : "1px solid",
             color: "white",
             boxShadow: 'none',
         },

@@ -29,7 +29,7 @@
         @apply font-montserrat text-blue dark:text-white;
     }
 
-    button:hover  {
+    button:hover {
         @apply opacity-80 font-montserrat disabled:opacity-100;
     }
 
@@ -39,6 +39,10 @@
 
     .d-flex-col {
         @apply flex flex-col
+    }
+
+    .d-flex-col-reverse {
+        @apply flex flex-col-reverse
     }
 
     .center-center {
@@ -102,7 +106,15 @@
     }
 
     .content-section {
-        @apply my-12 md:my-24
+        @apply py-8 md:py-16
+    }
+
+    .gap {
+        @apply gap-4 md:gap-8
+    }
+
+    .marker {
+        @apply border-2 flex center-center rounded-xl p-4 gap-2
     }
 
     .tag {
@@ -127,6 +139,10 @@
 
     .handle {
         @apply font-montserrat w-[24px] h-[24px] rounded-full flex justify-center items-center z-50 bg-beige dark:bg-grey hover:opacity-80 transition-transform duration-300 ease-in-out;
+    }
+
+    .images {
+        @apply w-full h-auto object-cover rounded-xl
     }
 
     .parallax {

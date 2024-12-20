@@ -3,13 +3,13 @@ import {useState} from "react";
 
 import {useTranslation} from "react-i18next";
 
-import {HeartRelayCard} from "../HeartRelayCard";
 import {SpringLayoutTransitionDiv} from "../animations/SpringLayoutTransitionDiv";
 import {Title} from "../Title";
+import {NewsCard} from "../NewsCard";
 
-import {heart_relays_content} from "../../constants/heart_relays_content";
+import {news_content} from "../../constants/news_content";
 
-export const HeartRelay = () => {
+export const News = () => {
     const {t} = useTranslation();
     const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -19,17 +19,12 @@ export const HeartRelay = () => {
 
     return (
         <SpringLayoutTransitionDiv className="flex d-flex-col gap">
-            <div>
-                <Title text={t('heart_relay')} level={2} color="green"/>
-                <p className="p-text mt-2">
-                    {t('heart_relay_text')}
-                </p>
-            </div>
+                <Title text={t('news')} level={2} color="white"/>
             <div className={`d-flex-col gap ${expandedIndex !== null ? '' : 'lg:d-flex-row'}`}>
-                {heart_relays_content.map((heartRelay, index) => (
-                    <HeartRelayCard
-                        key={"HeartRelayCard" + index}
-                        heartRelay={heartRelay}
+                {news_content.map((news, index) => (
+                    <NewsCard
+                        key={"News" + index}
+                        news={news}
                         expanded={expandedIndex === index}
                         onExpandClick={() => handleExpandClick(index)}
                     />

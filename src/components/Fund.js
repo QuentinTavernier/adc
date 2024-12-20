@@ -98,7 +98,7 @@ export const Fund = (props) => {
                                         style={{borderBottomColor: `var(--color-${color})`}}
                                     />
                                     <div
-                                        className={`border-2 flex center-center gap-2 border-${color} rounded-xl p-4 w-full`}>
+                                        className={`marker border-${color} w-full`}>
                                         <div className="flex flex-row gap-1">
                                             {Array.from({length: number}).map((_, iconIndex) => (
                                                 <IconComponent
@@ -126,7 +126,7 @@ export const Fund = (props) => {
         return isMobile && numberOfLevelReached > 0 && (
             <EnteringDiv>
                 <SpringLayoutTransitionDiv
-                    className={`border-2 mt-4 flex center-center w-fit gap-2 border-${color} rounded-xl p-4`}>
+                    className={`marker border-${color} mt-4 w-fit`}>
                     <div className="flex flex-row gap-1">
                         {Array.from({length: numberOfLevelReached}).map((_, index) => (
                             <IconComponent

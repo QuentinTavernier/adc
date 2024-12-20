@@ -17,47 +17,46 @@ export const HeartRelayCard = (props) => {
 
     const {t} = useTranslation();
 
+    const StatItem = ({icon, value, label}) => (
+        <div className="flex items-center space-x-2">
+            <IconComponent
+                icon={icon}
+                color="green"
+                size="large"
+            />
+            <p className="text-green font-montserrat">
+                <span className="font-bold text-xl">{value}</span> {label}
+            </p>
+        </div>
+    );
+
     return (
         <ScrollVisibilityDiv className="w-full">
             <SpringLayoutTransitionDiv
                 className="h-full"
             >
                 <div className="card h-full justify-between">
-                    <div className="flex gap-2 d-flex-col">
-                            <Title
-                                level={3}
-                                text={"Edition " + year}
-                                color="green"
-                            />
-                        <div className="d-flex-row start-center">
-                            <IconComponent
+                    <div className="flex gap-4 d-flex-col">
+                        <Title
+                            level={3}
+                            text={"Édition " + year}
+                        />
+                        <div className="space-y-2">
+                            <StatItem
                                 icon="directions_run"
-                                color="green"
-                                size="small"
+                                value={km}
+                                label={t('participants')}
                             />
-                            <p className="p-text ml-2">
-                                {km} kms parcourus
-                            </p>
-                        </div>
-                        <div className="d-flex-row start-center">
-                            <IconComponent
+                            <StatItem
                                 icon="volunteer_activism"
-                                color="green"
-                                size="small"
+                                value={`${funds}€`}
+                                label={t('collected')}
                             />
-                            <p className="p-text ml-2">
-                                {funds}€ récoltés
-                            </p>
-                        </div>
-                        <div className="d-flex-row start-center">
-                            <IconComponent
+                            <StatItem
                                 icon="diversity_3"
-                                color="green"
-                                size="small"
+                                value={participants}
+                                label={t('participants')}
                             />
-                            <p className="p-text ml-2">
-                                {participants} participants
-                            </p>
                         </div>
                     </div>
                     {expanded &&

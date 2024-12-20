@@ -9,17 +9,11 @@ import {SpringLayoutTransitionDiv} from "./animations/SpringLayoutTransitionDiv"
 import {ScrollVisibilityDiv} from "./animations/ScrollVisibilityDiv";
 import {ImagesGallery} from "./ImagesGallery";
 
-import {ButtonComponent} from "./ButtonComponent";
-
-export const HeartRelayCard = (props) => {
-    const {achievement, expanded, onExpandClick} = props
-    const {title, link, mainImages, images, resume, skills} = achievement
+export const NewsCard = (props) => {
+    const {news, expanded, onExpandClick} = props
+    const {title, short_description, description, images} = news
 
     const {t} = useTranslation();
-
-    const onClickOnLinkButton = ()  => {
-      window.open(link)
-    }
 
     return (
         <ScrollVisibilityDiv className="w-full">
@@ -27,30 +21,28 @@ export const HeartRelayCard = (props) => {
                 className="h-full"
             >
                 <div className="card h-full justify-between">
-                    <div>
-                        <div className="d-flex-row between-center">
-                            <Title
-                                level={4}
-                                text={t(title)}
-                                fontWeight="bold"
-                            />
-                        </div>
-                        <div className="w-full flex start-center">
-                            <img
-                                src={require(`../assets/images/${mainImages["dark"]}.webp`)}
-                                className="relative h-20 w-auto mt-2 mb-4"
-                                alt={t(title)}
-                            />
-                        </div>
+                    <div className="flex gap-4 d-flex-col">
+                        <Title
+                            level={3}
+                            text={title}
+                            color="green"
+                        />
+                        {!expanded &&
+                        <ImagesGallery
+                            isPreview
+                            images={images}
+                            isLandscapeImage
+                        />
+                        }
                         <p className="p-text">
-                            {t(resume)}
+                            {short_description}
                         </p>
                     </div>
                     {expanded &&
                         <>
                             <div className="py-6 w-full">
                                 <p className="p-text mb-2">
-                                    {t('what_did_i_do')}
+                                    {description}
                                 </p>
                             </div>
                             <div className="w-full">
@@ -62,16 +54,8 @@ export const HeartRelayCard = (props) => {
                         </>
                     }
                     <div
-                        className={`d-flex-col md:d-flex-row w-full mt-8 md:mt-16 ${expanded && link ? " center-end gap-4 md:between-center" : "end-end" }`}
+                        className={`d-flex-col md:d-flex-row w-full mt-8 md:mt-16 end-end`}
                     >
-                        {expanded && link &&
-                            <ButtonComponent
-                                icon="link"
-                                variant="contained"
-                                onClick={onClickOnLinkButton}
-                                text={t('discover')}
-                            />
-                        }
                         <button
                             onClick={onExpandClick}
                             className="d-flex-row gap-2 center-center"
@@ -81,7 +65,7 @@ export const HeartRelayCard = (props) => {
                             </p>
                             <IconComponent
                                 icon={expanded ? "expand_less" : "expand_more"}
-                                color="white"
+                                color="blue"
                             />
                         </button>
                     </div>
@@ -91,8 +75,8 @@ export const HeartRelayCard = (props) => {
     );
 }
 
-HeartRelayCard.propTypes = {
-    achievement: PropTypes.object.isRequired,
+NewsCard.propTypes = {
+    news: PropTypes.object.isRequired,
     expanded: PropTypes.bool.isRequired,
     onExpandClick: PropTypes.func.isRequired,
 }

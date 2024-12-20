@@ -86,7 +86,7 @@ export const Menu = (props) => {
 
     return (
         <Box
-            className="fixed flex justify-center top-0 left-0 h-20 w-full z-50 bg-white dark:bg-black"
+            className="fixed flex justify-center top-0 left-0 h-20 w-full bg-white dark:bg-black z-[150]"
             sx={styles.drawerPaper}
         >
             {/* Desktop Menu */}

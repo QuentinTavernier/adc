@@ -11,7 +11,7 @@ export const Logo = (props) => {
     return (
         <img
             src={isHeader ? images.header : images.default}
-            className={`relative w-auto ${isHeader ? "h-12" : "h-28"}`}
+            className={`relative w-auto ${isHeader ? "h-12" : "h-32"}`}
             alt="Logo"
         />
     )

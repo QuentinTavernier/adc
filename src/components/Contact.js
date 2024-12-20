@@ -1,22 +1,46 @@
+import {useTranslation} from "react-i18next";
+
 import {ButtonComponent} from "./ButtonComponent";
 
 export const Contact = () => {
+    const {t} = useTranslation();
+
+    const legalNotices = require('../assets/docs/legal_notices.doc');
+    const AGMReport = require('../assets/docs/report.pdf');
+
     return (
-        <div className="d-flex-col md:d-flex-row gap-2">
-            <ButtonComponent
-                variant="contained"
-                icon="email"
-                text="tavernier.q@gmail.com"
-                onClick={() => window.open('mailto:tavernier.q@gmail.com')}
-            />
-            <ButtonComponent
-                isLinkedInIcon
-                onClick={() => window.open('https://www.linkedin.com/in/quentin-tavernier-a5a01316a/')}
-            />
-            <ButtonComponent
-                isGitHubIcon
-                onClick={() => window.open('https://github.com/QuentinTavernier/')}
-            />
+        <div className="d-flex-col-reverse md:d-flex-col gap-4 md:gap-2">
+            <div className="flex flex-col center-center md:end-end gap-2 mt-4 md:mt-0 md:mb-4">
+                <a
+                    href={legalNotices}
+                    download
+                    className="p-text underline"
+                >
+                    {t('legal_notices')}
+                </a>
+                <a
+                    href={AGMReport}
+                    download
+                    className="p-text underline"
+                >
+                    {t('AGM_report')}
+                </a>
+            </div>
+            <div className="flex flex-row gap-2">
+                <ButtonComponent
+                    icon="facebook"
+                    onClick={() => window.open('https://www.facebook.com/auvergnatsducoeur/?locale=fr_FR')}
+                />
+                <ButtonComponent
+                    isLinkedInIcon
+                    onClick={() => window.open('https://www.linkedin.com/company/auvergnats-du-coeur/')}
+                />
+                <ButtonComponent
+                    variant="contained"
+                    icon="email"
+                    onClick={() => window.open('mailto:auvergnatsducoeur@gmail.com')}
+                />
+            </div>
         </div>
     )
 }

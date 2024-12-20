@@ -28,6 +28,7 @@ export const Title = (props) => {
     return (
         <Tag
             className={`
+                z-[99]
                 text-${color}
                 ${fontWeightClasses[fontWeight] || 'font-normal'}
                 ${uppercase ? 'uppercase' : ''}

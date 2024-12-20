@@ -24,6 +24,6 @@ export const SpringLayoutTransitionDiv = (props) => {
 }
 
 SpringLayoutTransitionDiv.propTypes = {
-    children: PropTypes.object.isRequired,
+    children: PropTypes.any.isRequired,
     className: PropTypes.string,
 }

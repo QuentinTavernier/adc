@@ -1,14 +1,23 @@
 {
   "jackpot": "Notre cagnotte",
   "jackpot_text": "Notre objectif est de collecter entre 4 000€ et 6 000€ par an dans le but de pouvoir rassembler le plus rapidement possible les fonds pour sauver un enfant atteint de malformation cardiaque (un forfait de 12 000€ est nécessaire comprenant le coût de l'opération en chirurgie cardiaque, le transport et l'hébergement en famille d'accueil).",
-  "participate" : "Je participe",
+  "participate": "Je participe",
   "next_event": "Prochain événement",
-  "i_register" : "Je m'inscris",
+  "i_register": "Je m'inscris",
   "heart_relay": "Relais du coeur",
   "heart_relay_text": "Une course solidaire dans l'enceinte du Jardin Henri-Vinay : 1 km parcouru = 1€ reversé au profit de Mécénat Chirurgie Cardiaque",
-  "advent_calendar": "Calendrier de l'avent",
+  "advent_calendar": "Calendrier de l'avent solidaire",
+  "advent_calendar_text": "24 cadeaux auprès de nos commerçants locaux cachés derrières des cases virtuelles (du 1er au 24 décembre) et 100% des bénéfices sont reversés au profit de Mécénat Chirurgie Cardiaque.",
   "news": "Actualités",
   "who_are_we": "Qui sommes nous ?",
-  "learn_more" :  "En savoir plus",
-  "hide" : "Cacher"
+  "who_are_we_text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "learn_more": "En savoir plus",
+  "hide": "Cacher",
+  "collected": "collectés",
+  "participants": "participants",
+  "kms_traveled": "kms parcourus",
+  "partners" : "Nos partenaires :",
+  "sponsors" : "Nos sponsors :",
+  "legal_notices" : "Mentions légales",
+  "AGM_report" : "Compte rendu d'AG"
 }
