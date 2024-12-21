@@ -13,54 +13,11 @@ export const EventCalendar = () => {
     const {
         title,
         description,
-        location,
-        startDate,
-        endDate,
-        startTime,
-        endTime,
         day,
         number,
         month,
         link
     } = next_event_content;
-
-    const handleAddEvent = () => {
-        const encodedTitle = encodeURIComponent(title);
-        const encodedDescription = encodeURIComponent(description);
-        const encodedLocation = encodeURIComponent(location || '');
-        const formattedStartDate = startDate.replace(/-/g, '') + 'T' + startTime.replace(/:/g, '') + 'Z';
-        const formattedEndDate = endDate.replace(/-/g, '') + 'T' + endTime.replace(/:/g, '') + 'Z';
-
-        const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-        if (isiOS) {
-            const icsContent =
-                `
-                BEGIN:VCALENDAR
-                VERSION:2.0
-                PRODID:-//Your App//EN
-                CALSCALE:GREGORIAN
-                BEGIN:VEVENT
-                DTSTART:${formattedStartDate}
-                DTEND:${formattedEndDate}
-                SUMMARY:${encodedTitle}
-                DESCRIPTION:${encodedDescription}
-                LOCATION:${encodedLocation}
-                END:VEVENT
-                END:VCALENDAR
-                `;
-            const blob = new Blob([icsContent], {type: "text/calendar;charset=utf-8"});
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "event.ics";
-            link.click();
-            URL.revokeObjectURL(url);
-        } else {
-            const googleCalendarUrl = `https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodedTitle}&dates=${formattedStartDate}/${formattedEndDate}&details=${encodedDescription}&location=${encodedLocation}`;
-            window.open(googleCalendarUrl, "_blank");
-        }
-    };
 
     return (
         <ScrollVisibilityDiv>
@@ -95,12 +52,6 @@ export const EventCalendar = () => {
                                     />
                                 </div>
                             )}
-                            <ButtonComponent
-                                animateIcon
-                                icon="event"
-                                text={t('add_to_calendar')}
-                                onClick={handleAddEvent}
-                            />
                         </div>
                     </div>
                 </div>
